@@ -15,19 +15,17 @@
 <tr th:each="currentAnimal : ${animal}" >
 	<td> <p>Animal Id:</p> </td>
 	<td th:text="${currentAnimal.id}" />
-	<td> <p> | </p> </td>
-	<td th:text="${currentAnimal.}"  />
-	<td> <p> | </p> </td>
-	<td th:text="${currentAnimal.}" />
-	<td> <p> | </p> </td>
-	<td th:text="${currentAnimal.}" />
-	<td> <p> | </p> </td>
-	<td th:text="${currentAnimal.}" />
-	<td> <p> | </p> </td>
-	<td th:text="${currentAnimal." />
-	<td> <p> | </p> </td>
-	<td th:text="${currentAnimal.}" />
-	<td> <p> | </p> </td>
+	<td> <p> | Name:</p> </td>
+	<td th:text="${currentAnimal.name}"  />
+	<td> <p> |  Species: </p> </td>
+	<td th:text="${currentAnimal.species}" />
+	<td> <p> | Age: </p> </td>
+	<td th:text="${currentAnimal.age}" />
+	<td> <p> | Arrival Date: </p> </td>
+	<td th:text="${currentAnimal.arrivalDate}" />
+	<td> <p> | Good with kids? </p> </td>
+	<td th:text="${currentAnimal.goodWithKids" />
+	
 </tr>
 </table>
 </form>
