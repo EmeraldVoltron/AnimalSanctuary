@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Animals</title>
+</head>
+<body>
+
+<form th:object="${newAnimal}" th:action="@{/update/{id}(id=${newAnimal.id})}" method='POST'>
+
+Animal Name: <input name="animalName" size="20" th:field="*{name}"> <br />
+Field here: <input name="" size="10" th:field="*{}"><br />
+Age: <input name="age" size="20" th:field="*{}"><br />
+Field here: <input name="" size="20" th:field="*{}"><br />
+Field here: <input name="" size="20" th:field="*{}"><br />
+Field here: <input name="" size="20" th:field="*{}"><br />
+<input name="submit" type="submit" value="submit" />
+
+</form>
+<a href="viewAnimals">View all Animals</a>
+
+
+</body>
+</html>
