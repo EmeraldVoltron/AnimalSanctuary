@@ -8,6 +8,8 @@ package beans;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,10 +17,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Adopter {
+	@Id
+	@GeneratedValue
 	private long id;
-	
 	private String name;
-	
 	@Autowired
 	private Address address;
 	private boolean hasCriminalRecord = false;

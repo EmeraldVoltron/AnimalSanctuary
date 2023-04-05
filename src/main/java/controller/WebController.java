@@ -23,7 +23,7 @@ import repository.AnimalRepository;
  */
 @Controller
 public class WebController {
-	@Autowired(required = false)
+	@Autowired(required=false)
 	AnimalRepository arepo;
 	
 	@GetMapping({"/", "viewAll"})
