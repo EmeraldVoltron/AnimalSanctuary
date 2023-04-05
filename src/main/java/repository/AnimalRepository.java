@@ -3,12 +3,12 @@
  * CIS175 - Spring 2023
  * Apr 4, 2023
  */
-package dmacc.repository;
+package repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import dmacc.beans.Animal;
+import beans.Animals;
 
 
 /**
@@ -16,6 +16,6 @@ import dmacc.beans.Animal;
  *
  */
 @Repository
-public interface AnimalRepository extends JpaRepository<Animal, Long>{
+public interface AnimalRepository extends JpaRepository<Animals, Long>{
 	
 }
