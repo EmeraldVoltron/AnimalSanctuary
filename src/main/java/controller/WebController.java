@@ -26,7 +26,7 @@ public class WebController {
 	@Autowired(required=false)
 	AnimalRepository arepo;
 	
-	@GetMapping({"/", "viewAll"})
+	@GetMapping({"/viewAll"})
 	public String viewAllAnimals(Model model) {
 		if(arepo.findAll().isEmpty()) {
 			return addNewAnimal(model);
@@ -48,13 +48,20 @@ public class WebController {
 		return viewAllAnimals(model);
 	}
 	
-//	@GetMapping("/edit/{id}")
-//	public String showUpdateAnimal(@PathVariable("id") long id, Model model) {
-//		Animals a = arepo.findById(id).orElse(null);
-//		model.addAttribute("newAnimal", a);
-//		return "addAnimals";
-//		
-//	}
+	@GetMapping("/edit/{id}")
+	public String showUpdateAnimal(@PathVariable("id") long id, Model model) {
+		Animals a = arepo.findById(id).orElse(null);
+		model.addAttribute("newAnimal", a);
+		return "addAnimals";
+		
+	}
+	
+	@PostMapping("/update/{id}")
+	public String reviseAnimal(Animals a, Model model) {
+		arepo.save(a);
+		return viewAllAnimals(model);
+	}
+	
 	//both of these are to edit and delete the different pets but need the employee class
 	
 	//not sure if i need a viewAll in this controller?
@@ -64,6 +71,8 @@ public class WebController {
 		arepo.delete(a);
 		return viewAllAnimals(model);
 	}
+	
+	
 	
 	
 }
