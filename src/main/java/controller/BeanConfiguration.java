@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import beans.Address;
 import beans.Adopter;
+import beans.Animals;
 
 @Configuration
 public class BeanConfiguration {
@@ -26,5 +27,10 @@ public class BeanConfiguration {
 		return bean;
 	}
 	
+	@Bean
+	public Animals animals() {
+		Animals bean = new Animals("Caribou");
+		return bean;
+	}
 
 }

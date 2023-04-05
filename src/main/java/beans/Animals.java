@@ -35,19 +35,30 @@ public class Animals {
 	
 	
 	public Animals(String name, String species, int age) {
-		
+		super();
+		this.name = name;
+		this.species = species;
+		this.age = age;
 	}
 	
 	public Animals(String name, String breed, String species, int age, Date arrivalDate, boolean goodWithKids) {
+		super();
+		this.name = name;
+		this.breed = breed;
+		this.age = age;
+		this.arrivalDate = arrivalDate;
 		
+		this.species = species;
+		this.goodWithKids = goodWithKids;
 	}
 	
 	public Animals(String name, int age) {
-		
+		this.name = name;
+		this.age = age;
 	}
 	
 	public Animals(String name) {
-		
+		this.name = name;
 	}
 }
 	
