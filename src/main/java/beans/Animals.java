@@ -7,10 +7,10 @@ package beans;
 
 import java.sql.Date;
 
-import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,7 +25,6 @@ public class Animals {
 	@Id
 	@GeneratedValue
 	private long id;
-	
 	private String name;
 	private String breed;
 	private String species;
